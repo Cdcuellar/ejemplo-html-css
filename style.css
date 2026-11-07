@@ -396,3 +396,28 @@ footer {
         padding: 30px 20px;
     }
 }
+/* ===== Jornada (radios) ===== */
+.registro fieldset.jornada {
+    display: block;          /* quita las 2 columnas solo aquí */
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;         /* en celular bajan si no caben */
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.opcion input {
+    accent-color: var(--magenta);
+    width: 18px;
+    height: 18px;
+}
