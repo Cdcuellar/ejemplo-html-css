@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="html.png" alt="logo html" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">inicio</a></li>
+                <li><a href="competencias.html" class="activo">competencias</a></li>
+                <li><a href="login.html">iniciar sesión</a></li>
+                <li><a href="registro.html">registrarse</a></li>
+            </ul>
+        </nav>
+    </header>  
+
+    <main>
+        <section class="formulario">
+            <h1>iniciar sesión</h1>
+            <p>Ingresar con el correo y la contraseña para registrarse</p>
+            <form action="index.html" method="get">
+                <div class="campo">
+                    <label for="correo" >Correo electronico</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@example.com" autocomplete="email" required>
+                </div>
+                <div class="campo">
+                    <label for="clave">Contraseña</label><br>
+                    <input type="password" id="clave" name="clave" minlength="8" placeholder="ingrese contraseña" autocomplete="current-password" required>
+                </div>
+                <div class="recordar">
+                    <label>
+                        <input type="checkbox" name="recordar">Recordarme
+                    </label>
+                </div>
+                    <button type="submit" class="boton">Ingresar</button>
+            </form>
+            <p class="pie-form"> ¿no tiene cuenta? <a href="registro.html">Registrese</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&COPY; 2026 Proyecto formativo ADSO</p>
+    </footer>
+</body>
+</html>

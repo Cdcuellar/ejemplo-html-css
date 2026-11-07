@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="html.png" alt="logo html" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">inicio</a></li>
+                <li><a href="competencias.html" class="activo">competencias</a></li>
+                <li><a href="login.html">iniciar sesión</a></li>
+                <li><a href="registro.html">registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="formulario registro">
+            <h1>Registro de aprendices</h1>
+            <p class="pie-form">completa tus datos para crear tu cuenta. los datos con * son obligatorios</p>
+            <form action="index.html" method="get">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <div class="campo">
+                        <label for="nombre">Nombres(*)</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Pepito Fulano" autocomplete="given-name" required>
+                    </div>
+                    <div class="campo">
+                        <label for="apellidos">Apellidos(*)</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Urrutia Perez" autocomplete="family-name" required>
+                    </div>
+                    <div class="campo">
+                        <label for="tipo-documento">Tipo de documento(*)</label>
+                        <select id="tipo-documento" name="tipo-documento" required>
+                            <option value="" disabled selected>seleccione...</option>
+                            <option value="CC">Cedua de Ciudadania</option>
+                            <option value="TI">Tarjeta de Identidad</option>
+                            <option value="CE">Cedua de Extrangeria</option>
+                            <option value="PPT">Permiso de Proteccion Temporal</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="documento">Numero de documento (*)</label>
+                        <input type="text" id="documento" name="documento" placeholder="124536879" pattern="[0-9]{6,10}" inputmode="numeric" 
+                        title="solo numeros, entre 6 y 10 digitos" required>
+                    </div>
+                    <div class="campo">
+                        <label for="nacimiento">fecha de nacimiento</label>
+                        <input type="date" id="nacimiento" name="nacimiento" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="3214569875">
+                    </div>
+                    <div class="campo">
+                        <label for="correo" >Correo electronico(*)</label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@example.com" autocomplete="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="clave" >contraseña(*)</label>
+                        <input type="password" id="clave" name="clave" minlength="8" 
+                        pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+                        placeholder="minimo 8 caracteres, una mayuscula y un numero" autocomplete="current-password" required>
+                    </div>
+                    
+                </fieldset>
+                <fieldset>
+                    <div class="campo">
+                        <label for="programa">Programa(*)</label>
+                        <select id="programa" name="programa" required>
+                            <option value="" disabled selected>seleccione...</option>
+                            <option value="adso">Analisis y Desarrollo de Software</option>
+                            <option value="tecp">Tecnico en programacion</option>
+                            <option value="analitica">Analitica de Datos</option>
+                            <option value="diseñojuegos">Diseño de juegos</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="ficha">Numero de ficha (*)</label>
+                        <input type="text" id="ficha" name="ficha" placeholder="3534105" pattern="[0-9]{7}" inputmode="numeric"
+                        required>
+                    </div>
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="boton">Registrese</button>
+            </form>
+            <p class="pie-form">¿ya tiene cuenta? <a href="login.html">login</a></p>
+        </section>
+    </main>  
+</body>
+</html>
